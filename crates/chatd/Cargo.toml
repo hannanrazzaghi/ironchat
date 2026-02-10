@@ -1,0 +1,26 @@
+[package]
+name = "chatd"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = { workspace = true }
+clap = { workspace = true }
+chat-core = { path = "../chat-core" }
+redis = { workspace = true, optional = true }
+rustls = { workspace = true }
+rustls-pemfile = { workspace = true }
+tokio = { workspace = true }
+tokio-rustls = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+[features]
+redis = ["chat-core/redis", "dep:redis"]
+
+[dev-dependencies]
+rcgen = { workspace = true }
+tempfile = "3"
+tokio-rustls = { workspace = true }
+rustls = { workspace = true }
+chat-core = { path = "../chat-core" }
