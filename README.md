@@ -4,11 +4,15 @@ A minimal, production-quality encrypted chatroom in Rust.
 
 ## Install
 
+### For developers
+
 ```bash
-cargo install --git <repo-url>
+cargo install --git https://github.com/hannanrazzaghi/ironchat.git
 ```
 
-Replace `<repo-url>` with your GitHub repository URL.
+### For server deployment
+
+See [DEPLOY.md](DEPLOY.md) for complete step-by-step server setup with Let's Encrypt, systemd, and client distribution.
 
 ## TLS certificates
 
@@ -33,7 +37,7 @@ Allowlist and pending files (defaults in current directory):
 Example allowlist:
 
 ```toml
-allow = ["127.0.0.1", "10.0.0.0/8", "192.168.12.157"]
+allow = ["127.0.0.1"]
 ```
 
 ### Admin commands
